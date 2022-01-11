@@ -33,11 +33,11 @@
                     <div id="login-box" class="col-md-12 bg-ligth-text-dark">
                         <form id="formLogin" action="" method="post" class="form">
                             <h3 class="text-center title--form">Iniciar Sesion</h3>
-                            <div class="form-group mb-4 div--form">
-                                <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Usuario">
+                            <div class="wrap-input100 form-group mb-4 div--form">
+                                <input type="text" name="usuario" id="usuario" class="form-control input100" placeholder="Usuario">
                             </div>
-                            <div class="form-group div--form">
-                                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                            <div class="form-group div--form wrap-input100">
+                                <input type="password" name="password" id="password" class="form-control input100" placeholder="Password">
                             </div>
 
                             <div class="form-group text-center mt-4">

@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once "login/bd/conexion.php";
+include_once "../bd/conexion.php";
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
@@ -17,10 +17,10 @@ $resultado = $conexion -> prepare($consulta);
 $resultado -> execute();
 
 if($resultado->rowCount() >= 1){
-    $data =$resultado->fetchAll(PDO::FETCH_ASSOC);
-    $_SESION["s_usuario"] = $usuario;
+    $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION["s_usuario"] = $usuario;
 }else{
-    $_SESION["s_usuario"] = null;
+    $_SESSION["s_usuario"] = null;
     $data = null;
 }
 
