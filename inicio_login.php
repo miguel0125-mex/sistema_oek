@@ -39,7 +39,6 @@
                             <div class="form-group div--form wrap-input100">
                                 <input type="password" name="password" id="password" class="form-control input100" placeholder="Password">
                             </div>
-
                             <div class="form-group text-center mt-4">
                                 <input type="submit" name="submit" id="btnSubmit" class="btn btn-dark btn-lg btn-block" value="Conectar">
                             </div>
