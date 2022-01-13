@@ -18,7 +18,7 @@
                             Formulario - Agregar Empleado
                             </div>
                             <div class="card-body">
-                                <form action="" class="form" method="POST" enctype="multipart/form-data">
+                                <form id="formAgregar" action="" class="form" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-group">
@@ -169,10 +169,11 @@
                             </div>
                             <div class="card-footer">
                                 <button type="button" class="btn btn-default btn-flat pull-left" ><i class="fa fa-close"></i> Borrar</button>
-                                <button type="submit" class="btn btn-primary btn-flat" name="add"><i class="fa fa-save"></i> Guardar</button>
+                                <button id="btnEnviar" type="submit" class="btn btn-primary btn-flat" name="add"><i class="fa fa-save"></i> Guardar</button>
                             </div>
                         </div>
                     </div>
+
                 </main>
 
               
