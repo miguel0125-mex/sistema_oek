@@ -1,8 +1,7 @@
 <?php 
     require_once "vistas/superior.php";
-
+    
 ?>
-
 
 <div id="layoutSidenav_content">
                 <main>
@@ -18,7 +17,7 @@
                             Formulario - Agregar Empleado
                             </div>
                             <div class="card-body">
-                                <form id="formAgregar" action="" class="form" method="POST" enctype="multipart/form-data">
+                                <form id="formAgregar" action="bd-personal/crud.php" class="form" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-group">
@@ -96,7 +95,7 @@
                                             <div class="form-group">
                                                 <label for="direccion" class="control-label">Dirección</label>
                                                     <div class="">
-                                                        <input type ="text" class="form-control" name="direccion" id="direcion"></input>
+                                                        <input type ="text" class="form-control" name="direccion" id="direccion"></input>
                                                     </div>
                                             </div>
                                         </div>
@@ -151,19 +150,14 @@
                                                     </div>
                                             </div>
                                         </div>
-                                        <!--<div class="col-md-3">
+                                        <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="puesto" class="control-label">Puesto</label>
+                                                <label for="puesto" class="control-label">Num. Empleado</label>
                                                 <div class=""> 
-                                                    <select class="form-control" name="puesto" id="puesto">
-                                                        <option value="" selected>- Seleccionar -</option>
-                                                        <option value="Ejecutivo">Ejecutivo</option>
-                                                        <option value="Calidad">Calidad</option>
-                                                        <option value="Sistemas">Sistemas</option>
-                                                    </select>
+                                                    <input type="number" class="form-control" id="numEmpleado">
                                                 </div>
                                             </div>
-                                        </div>-->
+                                        </div>
                                     </div>
                                 </form>
                             </div>

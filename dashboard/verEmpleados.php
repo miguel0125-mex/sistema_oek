@@ -13,7 +13,7 @@
 ?>
 
 
-<div id="layoutSidenav_content">
+            <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Personal</h1>
@@ -28,6 +28,11 @@
                                 Tabla - Personal OEK
                             </div>
                             <div class="card-body">
+                                <div class="mb-4">
+                                    <button id="btnNuevo" type="button" class="btn btn-dark btnNuevo" data-toggle="modal">
+                                        Agregar
+                                    </button>
+                                </div>
                             <table id="tbPersonal" class="table table-striped table-bordered table-dark" style="width:100%">
                             <thead class="bg-primary text-white text-center">
                                 <tr>
@@ -66,8 +71,9 @@
                             </div>
                         </div>
                     </div>
-                </main>
-
-<?php  
-    require_once "vistas/inferior.php"
+                   
+                </main>       
+                <?php  include "vistas/modalAgregar.php";?>
+<?php 
+    require_once "vistas/inferior.php";
 ?>

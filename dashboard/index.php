@@ -74,11 +74,11 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="agregarEmpleados.php">Agregar Empleado</a>
+                                <!--<a class="nav-link" href="agregarEmpleados.php">Agregar Empleado</a>-->
                                 <a class="nav-link" href="verEmpleados.php">Ver Empleados</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                        <!--<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             Pages
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -108,16 +108,16 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                                     </nav>
                                 </div>
                             </nav>
-                        </div>
+                        </div>-->
                         <div class="sb-sidenav-menu-heading">NOMINAS</div>
                         <a class="nav-link" href="charts.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Charts
                         </a>
-                        <a class="nav-link" href="personal.php">
+                        <!--<a class="nav-link" href="personal.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Personal
-                        </a>
+                        </a>-->
                     </div>
                 </div>
                 <!--<div class="sb-sidenav-footer">
