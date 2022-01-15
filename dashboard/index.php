@@ -1,12 +1,9 @@
 <?php 
-
 session_start();
-
 if($_SESSION["s_usuario"] === null){
     header("Location: ../../inicio_login.php");
 }
-
-include_once "../dashboard/bd-personal/conexion.php";
+include_once "bd-personal/conexion.php";
 
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
@@ -178,7 +175,7 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table id="tbPersonal" class="table table-striped table-bordered table-dark" style="width:100%">
+                        <table id="datatablesSimple" class="table table-striped table-bordered table-dark" style="width:100%">
                             <thead class="bg-primary text-white text-center">
                                 <tr>
                                     <th>NUM. EMPLEADO</th>

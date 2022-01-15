@@ -75,6 +75,8 @@ $(document).ready(function() {
     });
 })*/
 
+
+
 $('#btnNuevo').click(function() {
     $("#addnew").modal('show');
 });
@@ -82,6 +84,3 @@ $('#btnNuevo').click(function() {
 $('.close').click(function() {
     $("#addnew").modal('hide');
 });
-$('#Cerrar').click(function() {
-    $("#addnew").modal('hide');
-})

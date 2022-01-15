@@ -33,7 +33,7 @@
                                         Agregar
                                     </button>
                                 </div>
-                            <table id="tbPersonal" class="table table-striped table-bordered table-dark" style="width:100%">
+                            <table id="datatablesSimple" class="table table-striped table-bordered table-dark" style="width:100%">
                             <thead class="bg-primary text-white text-center">
                                 <tr>
                                     <th>NUM. EMPLEADO</th>
@@ -74,6 +74,7 @@
                    
                 </main>       
                 <?php  include "vistas/modalAgregar.php";?>
+                
 <?php 
     require_once "vistas/inferior.php";
 ?>
