@@ -7,7 +7,7 @@
             	<h4 class="modal-title"><b>Agregar Empleado</b></h4>
           	</div>
 
-			<form class="form-horizontal" method="POST" action="employee_add.php" enctype="multipart/form-data">
+			<form class="form-horizontal" method="POST" action="bd-personal/crud.php" enctype="multipart/form-data" id="formAdd">
           		<div class="modal-body">
 					<div class="row">
 						<div class="col-lg-4">
@@ -45,7 +45,7 @@
 							<div class="form-group">
 								<label for="fNacimiento" class="control-label">Fecha Nacimiento</label>
 		
-								<input type="date" class="form-control" id="fNacimiento" name="fNacimietno" required>
+								<input type="date" class="form-control" id="fNacimiento" name="fNacimiento" required>
 							</div>
 						</div>
 						<div class="col-lg-4">
@@ -54,8 +54,8 @@
 		
 								<select class="form-control" name="genero" id="genero">
                                     <option value="" selected>- Seleccionar -</option>
-                                    <option value="Hombre">Hombre</option>
-                                    <option value="Mujer">Mujer</option>
+                                    <option value="HOMBRE">Hombre</option>
+                                    <option value="MUJER">Mujer</option>
                                 </select>
 							</div>
 						</div>		
@@ -104,7 +104,7 @@
 							<div class="form-group">
 								<label for="cPostal" class="control-label">Codigo Postal</label>
 		
-								<input type="number" class="form-control" id="cPostal" name="cPostal" min="70000" max="99999">
+								<input type="number" class="form-control" id="cPostal" name="cPostal">
 							</div>
 						</div>		
 					</div>	
@@ -136,9 +136,23 @@
 							<div class="form-group">
 								<label for="numEmpleado" class="control-label">Número Empleado</label>
 		
-								<input type="number" class="form-control" id="numEmpleado" name="numEmpleado" min="1000" max="99999">
+								<input type="number" class="form-control" id="numEmpleado" name="numEmpleado">
 							</div>
 						</div>	
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="puesto" class=" control-label">Puesto</label>
+								<select class="form-control" name="puesto" id="puesto">
+                                    <option value="" selected>- Seleccionar -</option>
+                                    <option value="EJECUTIVO">Ejecutivo</option>
+                                    <option value="CAPACITADOR">Capacitador</option>
+                                </select>
+							</div>
+						</div>	
+							
 					</div>
 
           		</div>

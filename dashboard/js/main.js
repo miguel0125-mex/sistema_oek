@@ -1,30 +1,37 @@
+$('#btnNuevo').click(function() {
+    $("#addnew").modal('show');
+    $("addnew").trigger('reset');
+    //id = null;
+});
+
+$('.close').click(function() {
+    $("#addnew").modal('hide');
+});
+
+
 /*
-
 $(document).ready(function() {
-    var opcion, id;
-
-    $btnEnviar = $("#btnEnviar").click(function(e) {
+    //Enviar datos
+    $("formAdd").submit(function(e) {
         e.preventDefault();
-        opcion = 1;
-        id = null;
-        //alert("hola");
-        //$id = $.trim($("#id").val());
-        $nombre = $.trim($("#nombre").val());
-        $aPaterno = $.trim($("#aPaterno").val());
-        $aMaterno = $.trim($("#aMaterno").val());
-        $edad = $.trim($("#edad").val());
-        $fNacimiento = $.trim($("#fNacimiento").val());
-        $genero = $.trim($("#genero").val());
-        $curp = $.trim($("#curp").val());
-        $rfc = $.trim($("#rfc").val());
-        $direccion = $.trim($("#direccion").val());
-        $estado = $.trim($("#estado").val());
-        $provincia = $.trim($("#provincia").val());
-        $cPostal = $.trim($("#cPostal").val());
-        $telefono = $.trim($("#telefono").val());
-        $email = $.trim($("#email").val());
-        $escolaridad = $.trim($("#escolaridad").val());
-        $numEmpleado = $.trim($("#numEmpleado").val());
+        id = $.trim($('#id').val());
+        nombre = $.trim($('#nombre').val());
+        aPaterno = $.trim($('#aPaterno').val());
+        aMaterno = $.trim($('#aMaterno').val());
+        edad = $.trim($('#edad').val());
+        fNacimiento = $.trim($('#fNacimiento').val());
+        genero = $.trim($('#genero').val());
+        curp = $.trim($('#curp').val());
+        rfc = $.trim($('#rfc').val());
+        direccion = $.trim($('#direccion').val());
+        estado = $.trim($('#estado').val());
+        provincia = $.trim($('#provincia').val());
+        cPostal = $.trim($('#cPostal').val());
+        telefono = $.trim($('#telefono').val());
+        correo = $.trim($('#correo').val());
+        escolaridad = $.trim($('#escolaridad').val());
+        numEmpleado = $.trim($('#numEmpleado').val());
+        puesto = $.trim($('#puesto').val());
 
         $.ajax({
             url: "../bd-personal/crud.php",
@@ -32,6 +39,7 @@ $(document).ready(function() {
             datatype: "json",
             data: {
                 id: id,
+                numEmpleado: numEmpleado,
                 nombre: nombre,
                 aPaterno: aPaterno,
                 aMaterno: aMaterno,
@@ -45,42 +53,30 @@ $(document).ready(function() {
                 provincia: provincia,
                 cPostal: cPostal,
                 telefono: telefono,
-                email: email,
+                correo: correo,
                 escolaridad: escolaridad,
-                numEmpleado: numEmpleado,
-                opcion: opcion
+                puesto: puesto,
             },
             success: function(data) {
-                if (data == "null") {
+                if (data == "") {
                     Swall.fire({
                         icon: "error",
-                        title: "Error al guardar los datos",
-                    });
+                        title: "Datos incompletos, intente de nuevo",
+                    })
                 } else {
-                    Swal.fire({
+                    Swall.fire({
                         icon: "success",
-                        title: "Se guardo con exito",
+                        title: "Empleado añadido satisfactoriamente",
                         confirmButtonColor: "#3085d6",
-                        confirmButtonText: "Ingresar"
+                        confirmButtonText: "OK"
                     }).then((result) => {
                         if (result.value) {
-                            window.location.href = "../dashboard/agregarEmpleados.php";
+                            window.location.href = "../dashboard/verEmpleados.php";
                         }
-                    });
+                    })
                 }
-                $("#tbPersonal").ajax.reload(null, false);
             }
-        })
-
+        });
     });
-})*/
-
-
-
-$('#btnNuevo').click(function() {
-    $("#addnew").modal('show');
 });
-
-$('.close').click(function() {
-    $("#addnew").modal('hide');
-});
+*/
