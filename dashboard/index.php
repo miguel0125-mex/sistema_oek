@@ -133,9 +133,17 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-primary text-white mb-4">
-                                <div class="card-body">Primary Card</div>
+                                <div class="card-body">
+                                    <?php
+                                    $sql = "SELECT COUNT(*) FROM personal";
+                                    $query = $conexion->query($sql);
+                                    $count = $query->fetchColumn();
+                                    echo "<h3>".$count."</h3>";
+                                    ?>
+                                    <p style="font-size:25px; margin: 0;">Total de Empleados</p>
+                                </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="verEmpleados.php">Ver Detalles</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>

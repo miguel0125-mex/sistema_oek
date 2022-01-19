@@ -69,6 +69,7 @@ if($_SESSION["s_usuario"] === null){
                                     <a class="nav-link" href="verEmpleados.php">Ver Empleados</a>
                                 </nav>
                             </div>
+                            <!--
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pages
@@ -99,7 +100,7 @@ if($_SESSION["s_usuario"] === null){
                                         </nav>
                                     </div>
                                 </nav>
-                            </div>
+                            </div>-->
                             <div class="sb-sidenav-menu-heading">NOMINAS</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

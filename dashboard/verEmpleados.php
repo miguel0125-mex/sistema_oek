@@ -1,6 +1,6 @@
 <?php 
     require_once "vistas/superior.php";
-
+    
     include_once "../dashboard/bd-personal/conexion.php";
 
     $objeto = new Conexion();
@@ -10,6 +10,7 @@
     $resultado = $conexion->prepare($consulta);
     $resultado->execute();
     $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -22,6 +23,28 @@
                             <li class="breadcrumb-item active">Tabla</li>
                         </ol>
                        
+                        <!--DIV IMPORTACION DE DATOS EXCEl-->
+                        <div class="">
+                            <h4 class="">Importar Archivo de Excel</h4>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card p-4 bg-dark" style="--bs-bg-opacity: .1;">
+                                        <form action="bd-personal/importarExcel.php" method="POST" name="formExcel" id="formExcel" enctype="multipart/form-data">
+                                            <div>
+                                                <label for="file" class="pe-4">Elija Archivo Excel
+                                                </label>
+                                                <input type="file" name="file" id="file" accept=".xls, .xlsx" class="pe-4">
+                                                <button type="submit" id="btnArchivo" name="import" class="btn btn-dark">Importar Registros</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        
+                        <hr>
+
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
