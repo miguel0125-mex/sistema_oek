@@ -67,6 +67,7 @@ if($_SESSION["s_usuario"] === null){
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <!--<a class="nav-link" href="agregarEmpleados.php">Agregar Empleado</a>-->
                                     <a class="nav-link" href="verEmpleados.php">Ver Empleados</a>
+                                    <a class="nav-link" href="asistencia.php">Asistencias</a>
                                 </nav>
                             </div>
                             <!--
@@ -102,9 +103,9 @@ if($_SESSION["s_usuario"] === null){
                                 </nav>
                             </div>-->
                             <div class="sb-sidenav-menu-heading">NOMINAS</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="nominas.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
+                                Nomina
                             </a>
                             <!--<a class="nav-link" href="personal.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>

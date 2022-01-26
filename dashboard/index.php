@@ -73,6 +73,7 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                             <nav class="sb-sidenav-menu-nested nav">
                                 <!--<a class="nav-link" href="agregarEmpleados.php">Agregar Empleado</a>-->
                                 <a class="nav-link" href="verEmpleados.php">Ver Empleados</a>
+                                <a class="nav-link" href="asistencia.php">Asistencias</a>
                             </nav>
                         </div>
                         <!--<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -107,9 +108,9 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                             </nav>
                         </div>-->
                         <div class="sb-sidenav-menu-heading">NOMINAS</div>
-                        <a class="nav-link" href="charts.html">
+                        <a class="nav-link" href="nominas.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Charts
+                            Nomina
                         </a>
                         <!--<a class="nav-link" href="personal.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -149,17 +150,20 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-warning text-white mb-4">
-                                <div class="card-body">Warning Card</div>
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">
+                                    <p style="font-size:25px; margin:0;">Asistencias</p>
+                                </div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="asistencia.php">Ver Detalles</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
+                        <!--
                         <div class="col-xl-3 col-md-6">
-                            <div class="card bg-success text-white mb-4">
-                                <div class="card-body">Success Card</div>
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">Warning Card</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
                                     <a class="small text-white stretched-link" href="#">View Details</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -175,6 +179,7 @@ $personal = $resultado->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                         </div>
+                            -->
                     </div>
 
                     <div class="card mb-4">

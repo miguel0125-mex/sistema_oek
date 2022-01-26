@@ -3,7 +3,7 @@ $("#formLogin").submit(function(e) {
     var usuario = $.trim($("#usuario").val()); //Se capturan los valores de los input
     var password = $.trim($("#password").val());
 
-    if (usuario.length == "" || password.length == "") {
+    if (usuario.length == 0 || password.length == 0) {
         Swal.fire({
             icon: 'warning',
             title: "Debe ingresar un usuario y/o contraseña",
@@ -17,7 +17,7 @@ $("#formLogin").submit(function(e) {
             data: { usuario: usuario, password: password },
             success: function(data) {
                 if (data == "null") {
-                    Swall.fire({
+                    Swal.fire({
                         icon: "error",
                         title: "Usuario y/o password incorrecta",
                     });
@@ -33,6 +33,7 @@ $("#formLogin").submit(function(e) {
                         }
                     });
                 }
+                console.log(data);
             }
         });
     }

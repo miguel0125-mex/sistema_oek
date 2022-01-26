@@ -44,8 +44,13 @@
                         </div>   
                         
                         <hr>
-
+                        <div class="mt-4 mb-4">
+                            <h4>Registrar Personal</h4>
+                        </div>
+                        
+                        <hr>
                         <div class="card mb-4">
+                            
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Tabla - Personal OEK
@@ -84,6 +89,9 @@
                                         <?php echo $personal['puesto'] ?>
                                     </td>
                                     <td>
+                                        <?php 
+                                            echo "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEditar'>EDITAR</button><button class='btn btn-danger btn-sm btnBorrar'>ELIMINAR</button></div></div>";
+                                        ?>
                                     </td>
                                 </tr>
                                 <?php    
