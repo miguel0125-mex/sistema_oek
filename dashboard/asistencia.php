@@ -25,17 +25,17 @@
                        
                         <!--DIV IMPORTACION DE DATOS EXCEl-->
                         <div class="">
-                            <h4 class="">Importar Archivo de Excel</h4>
+                            <h4 class="">Importar Archivo de Asistencia</h4>
                             <hr>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card p-4 bg-dark" style="--bs-bg-opacity: .1;">
-                                        <form action="bd-personal/importarExcel.php" method="POST" name="formExcel" id="formExcel" enctype="multipart/form-data">
+                                        <form action="" method="POST" name="formTxt" id="formTxt" enctype="multipart/form-data">
                                             <div>
-                                                <label for="file" class="pe-4">Elija Archivo Excel
+                                                <label for="file" class="pe-4">Elija Archivo
                                                 </label>
-                                                <input type="file" name="file" id="file" accept=".xls, .xlsx" class="pe-4">
-                                                <button type="submit" id="btnArchivo" name="subir" class="btn btn-dark">Importar Registros</button>
+                                                <input type="file" name="file" id="file" class="pe-4">
+                                                <button type="submit" id="btnArchivo_txt" name="subir" class="btn btn-dark">Importar</button>
                                             </div>
                                         </form>
                                     </div>
@@ -99,6 +99,7 @@
                     </div> 
                 </main>       
                 <?php  include "vistas/modalAgregar.php";?>
+
                 
 <?php 
     require_once "vistas/inferior.php";
