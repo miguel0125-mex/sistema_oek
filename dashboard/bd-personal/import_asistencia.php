@@ -19,8 +19,11 @@ if(in_array($_FILES["file"]["type"],$allowedFileType)){
 
     //SE RECORRE EL ARCHIVO
     while(feof($archivo_open)==false){
+        //LEE CADA LINEA DEL ARCHIVO
         $linea = fgets($archivo_open);
-        echo "<pre>"; print_r($linea);
+        //SEPARAMOS CADA LINEA CON ","
+        $data = explode(',', $linea);
+        echo "<pre>"; print_r($data);
     };
     //PREPARAR SENTENCIA SQL
     //$t_sql = "";
