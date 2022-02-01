@@ -98,7 +98,7 @@
                         </div>
                     </div> 
                 </main>       
-                <?php  include "vistas/modalAgregar.php";?>
+                
 
                 
 <?php 

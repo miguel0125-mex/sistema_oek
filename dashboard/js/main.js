@@ -24,7 +24,7 @@ $("#formTxt").submit(function(e) {
         contentType: false,
         processData: false,
         success: function(data) {
-            alert(data);
+            alert("ENVIO EXITOSO");
         }
     });
     //return false;

@@ -11,24 +11,50 @@ $allowedFileType=['text/txt', 'text/csv', 'text/plain'];
 if(in_array($_FILES["file"]["type"],$allowedFileType)){
     $targetPath = 'subidas/'.$_FILES['file']['name'];
     move_uploaded_file($_FILES['file']['tmp_name'],$targetPath);
-    echo "archivo movido";
-
+    //echo "archivo movido";
     $archivo = $targetPath;
     //ABRIR EL ARCHIVO TXT
-    $archivo_open = fopen($archivo, 'r');
+    //$archivo_open = fopen($archivo, 'r');
+    //echo $linea;
+    $linea = file($archivo);
+    //SENTENCIA SQL 
+    $t_sql = 'REPLACE INTO asistencia (id, idEmpleado, fecha, hora) VALUES (NULL, ?, ?, ?)';
+    $resultado = $conexion->prepare($t_sql);
+    $resultado-> bindParam(1, $idEmpleado);
+    $resultado-> bindParam(2, $fecha);
+    $resultado-> bindParam(3, $hora);
 
+    foreach($linea as $num_linea => $line){
+        $data = explode(',', $line);
+        $idEmpleado = $data[2];
+        $fecha = $data[7];
+        $hora = $data[8];
+        if($num_linea != 0){
+            //print_r($data);
+            $resultado->execute();
+            
+            //print_r($line);
+            //$result = $conexion->prepare($t_sql);
+            //$result -> execute();
+
+            //echo "importacion con exito";
+            //print_r($data);
+            //$data = explode(',', $linea);
+            //print_r($data);
+        }
+    }
+    /*
     //SE RECORRE EL ARCHIVO
     while(feof($archivo_open)==false){
-        //LEE CADA LINEA DEL ARCHIVO
-        $linea = fgets($archivo_open);
-        //SEPARAMOS CADA LINEA CON ","
-        $data = explode(',', $linea);
-        echo "<pre>"; print_r($data);
+
+        $line = fgets($archivo_open);
+        $data = explode('|', $line);
+        
     };
-    //PREPARAR SENTENCIA SQL
-    //$t_sql = "";
+    fclose($archivo_open);*/
+    header('location: ../asistencia.php');
 }
-fclose($archivo_open);
+
 //$nombre = ($_FILES['file']['name']);
 
 //echo ($nombre);
