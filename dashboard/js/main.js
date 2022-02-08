@@ -24,8 +24,16 @@ $("#formTxt").submit(function(e) {
         contentType: false,
         processData: false,
         success: function(data) {
-            alert("ENVIO EXITOSO");
+            alert(data);
         }
     });
     //return false;
+});
+
+tablaDominios = $('#tbAsistencia').DataTable({
+    'language': {
+        "url": "https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json"
+    },
+
+    "reponsive": true
 });

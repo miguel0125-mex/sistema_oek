@@ -24,13 +24,16 @@ if(in_array($_FILES["file"]["type"],$allowedFileType)){
     $resultado-> bindParam(2, $fecha);
     $resultado-> bindParam(3, $hora);
 
+    //PARA UNA EXPORTACION EXITOSA, SE TIENEN QUE ELIMINAR LOS ESPACIOS EXTRAS Y TABULACIONES DEL ARCHIVO TXT. HACER QUE CADA FILA ESTE DIVIDO POR COMAS PARA QUE SE PUEDA EXPORTAR SIN PROBLEMAS
     foreach($linea as $num_linea => $line){
         $data = explode(',', $line);
         $idEmpleado = $data[2];
-        $fecha = $data[7];
-        $hora = $data[8];
+        $fecha = $data[6];
+        $hora = $data[7];
         if($num_linea != 0){
-            //print_r($data);
+            //print_r($resultado);
+            //$sql = "INSERT INTO asistencia(estatus) VALUE ('$status')";
+            //if($hora  )
             $resultado->execute();
             
             //print_r($line);
@@ -54,7 +57,7 @@ if(in_array($_FILES["file"]["type"],$allowedFileType)){
     fclose($archivo_open);*/
     header('location: ../asistencia.php');
 }
-
+print json_encode($data);
 //$nombre = ($_FILES['file']['name']);
 
 //echo ($nombre);
