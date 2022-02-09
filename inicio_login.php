@@ -23,13 +23,13 @@
     <title>CONTROL DE ASISTENCIA - OEK</title>
 </head>
 
-<body>
+<body class="body">
 
     <section class="section-login" id="login">
-        <h2 class="text-center title--login">PAGINA PRINCIPAL</h2>
-        <div class="container">
+        <h2 class="text-center title--login">Ocean Estrategik</h2>
+        <div class="container" id="div-login">
             <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-lg-6">
+                <div id="login-column" class="col-lg-12">
                     <div id="login-box" class="col-md-12 bg-ligth-text-dark">
                         <form id="formLogin" action="" method="post" class="form">
                             <h3 class="text-center title--form">Iniciar Sesion</h3>
