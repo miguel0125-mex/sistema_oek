@@ -4,7 +4,6 @@ $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
 if(isset($_POST['add'])){
-    
     $numEmpleado = $_POST['numEmpleado'];
     $nombre = $_POST['nombre'];
     $aPaterno = $_POST['aPaterno'];
