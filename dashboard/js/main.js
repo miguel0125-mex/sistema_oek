@@ -1,17 +1,43 @@
-var fila, id;
-
 $('#btnNuevo').click(function() {
+    if ($("#edit")) {
+        $('#edit').attr("id", "addnew");
+        $('edit-btn').attr('name', 'add');
+    }
     $("#addnew").modal('show');
     $("addnew").trigger('reset');
+    $(".modal-title").text("Agregar Empleado");
+    $(".modal-header").css("background-color", "#2FF058");
+    $(".modal-header").css("color", "#fff");
+    $("#numEmpleado").val('');
+    $("#nombre").val('');
+    $("#aPaterno").val('');
+    $("#aMaterno").val('');
+    $("#edad").val('');
+    $("#telefono").val('');
+    $("#correo").val('');
+    $("#fNacimiento").val('');
+    $("#genero").val('');
+    $("#direccion").val('');
+    $("#estado").val('');
+    $("#provincia").val('');
+    $("#cPostal").val('');
+    $("#curp").val('');
+    $("#rfc").val('');
+    $("#escolaridad").val('');
+    $("#puesto").val('');
+
     //id = null;
 });
 
 $('.close').click(function() {
     $("#addnew").modal('hide');
+    $("#edit").modal('hide');
 });
 
 $(document).on('click', '.btnEditar', function() {
-    $("#addnew").modal('show');
+    $("#addnew").attr('id', 'edit');
+    $('add').attr('name', 'edit-btn');
+    $("#edit").modal('show');
     $(".modal-title").text("Editar Empleado");
     $(".modal-header").css("background-color", "#007bff");
     $(".modal-header").css("color", "white");
@@ -26,6 +52,15 @@ $(document).on('click', '.btnEditar', function() {
     telefono = parseInt(fila.find('td:eq(5)').text());
     correo = $.trim(fila.find('td:eq(6)').text());
     fNacimiento = $.trim(fila.find('td:eq(7)').text());
+    genero = $.trim(fila.find('td:eq(8)').text());
+    domicilio = $.trim(fila.find('td:eq(9)').text());
+    estado = $.trim(fila.find('td:eq(10)').text());
+    provincia = $.trim(fila.find('td:eq(11)').text());
+    cPostal = $.trim(fila.find('td:eq(12)').text());
+    curp = $.trim(fila.find('td:eq(13)').text());
+    rfc = $.trim(fila.find('td:eq(14)').text());
+    escolaridad = $.trim(fila.find('td:eq(15)').text());
+    puesto = $.trim(fila.find('td:eq(16)').text());
     //puesto = $.trim(fila.find('td:eq(7)').text());
     $("#numEmpleado").val(numEmpleado);
     $("#nombre").val(nombre);
@@ -35,7 +70,16 @@ $(document).on('click', '.btnEditar', function() {
     $("#telefono").val(telefono);
     $("#correo").val(correo);
     $("#fNacimiento").val(fNacimiento);
-    console.log(nombre);
+    $("#genero").val(genero);
+    $("#direccion").val(domicilio);
+    $("#estado").val(estado);
+    $("#provincia").val(provincia);
+    $("#cPostal").val(cPostal);
+    $("#curp").val(curp);
+    $("#rfc").val(rfc);
+    $("#escolaridad").val(escolaridad);
+    $("#puesto").val(puesto);
+    //console.log(puesto);
 });
 
 

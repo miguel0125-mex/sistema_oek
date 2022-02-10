@@ -16,10 +16,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
     if (datatablesSimple) {
         new simpleDatatables.DataTable(datatablesSimple, {
-            columns: [{
-                select: [8, 9, 10, 11, 12, 13, 14, 15],
-                hidden: true,
-            }]
+            labels: {
+                placeholder: 'Buscar...',
+                perPage: "{select} Seleccionar",
+                noRows: "No se encontraron registros",
+                info: "Mostrando {start} a {end} de {rows} entradas"
+            }
         });
     }
 });
